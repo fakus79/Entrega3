@@ -1,0 +1,31 @@
+* {
+    /*reset de estilos y estilos generales*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: $fuente-gral:
+    /*border: solid 1px blue;*/
+}
+
+body {
+    background-color: $fondo-light;
+}
+
+button {
+    /*redondear todos los botones*/
+    padding: 5px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+
+input[type="date"] {
+    /*espaciar y achicar todos los input de fecha*/
+    width: 120px;
+    margin-right: 20px;
+}
+
+input[type="text"] {
+    width: 100%;
+    margin-right: 20px;
+}
