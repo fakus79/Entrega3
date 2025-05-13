@@ -170,7 +170,7 @@ h1 {
   resize: none;
 }
 
-.descripcionContacto {
+.descripcionContactoRegistro {
   color: #354f52;
   padding-top: 20px;
   padding-bottom: 20px;
@@ -213,6 +213,10 @@ h1 {
 
 .msgText {
   width: 100%;
+}
+
+.ventajas_registro {
+  padding-left: 20px;
 }
 
 .container_contacto {
@@ -263,6 +267,57 @@ h1 {
 .bot_send {
   grid-area: bot_send;
   padding-top: 20px;
+}
+
+.container_registro {
+  color: #354f52;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(10, 0.1fr);
+  grid-auto-flow: row;
+  grid-template-areas: "txt_reglabel1" "inp_regname" "txt_reglabel2" "inp_regemail" "txt_reglabel3" "inp_regpsw" "txt_reglabel4" "inp_regpsw2" "txt_regnov" "bot_regsend";
+}
+
+.txt_reglabel1 {
+  grid-area: txt_reglabel1;
+}
+
+.txt_reglabel2 {
+  grid-area: txt_reglabel2;
+}
+
+.txt_reglabel3 {
+  grid-area: txt_reglabel3;
+}
+
+.txt_reglabel4 {
+  grid-area: txt_reglabel4;
+}
+
+.txt_regnov {
+  grid-area: txt_regnov;
+}
+
+.inp_regname {
+  grid-area: inp_regname;
+}
+
+.inp_regemail {
+  grid-area: inp_regemail;
+}
+
+.inp_regpsw {
+  grid-area: inp_regpsw;
+}
+
+.inp_regpsw2 {
+  grid-area: inp_regpsw2;
+}
+
+.bot_regsend {
+  grid-area: bot_regsend;
+  padding-top: 20px;
+  align-self: right;
 }
 
 /*---------------------------------------------------------------------------------------------------------------*/
@@ -344,5 +399,47 @@ h1 {
   }
   .bot_send {
     padding-left: 20px;
+  }
+  .container_registro {
+    color: #354f52;
+    padding: 10px 10px 0px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas: "txt_reglabel1 txt_reglabel3" "inp_regname inp_regpsw" "txt_reglabel2 txt_reglabel4" "inp_regemail inp_regpsw2" "txt_regnov bot_regsend";
+  }
+  .txt_reglabel1 {
+    grid-area: txt_reglabel1;
+  }
+  .txt_reglabel2 {
+    grid-area: txt_reglabel2;
+  }
+  .txt_reglabel3 {
+    grid-area: txt_reglabel3;
+  }
+  .txt_reglabel4 {
+    grid-area: txt_reglabel4;
+  }
+  .txt_regnov {
+    grid-area: txt_regnov;
+  }
+  .inp_regname {
+    grid-area: inp_regname;
+  }
+  .inp_regemail {
+    grid-area: inp_regemail;
+  }
+  .inp_regpsw {
+    grid-area: inp_regpsw;
+  }
+  .inp_regpsw2 {
+    grid-area: inp_regpsw2;
+  }
+  .bot_regsend {
+    grid-area: bot_regsend;
+    padding-top: 0px;
+    align-self: right;
   }
 }/*# sourceMappingURL=style.css.map */
