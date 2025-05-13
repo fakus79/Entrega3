@@ -10,6 +10,7 @@
 
 body {
   background-color: #F8F9FA;
+  background-image: linear-gradient(to bottom, #F8F9FA, #dbdde0);
 }
 
 button {
@@ -17,6 +18,13 @@ button {
   padding: 5px;
   border-radius: 12px;
   text-align: center;
+  /*transición y cambio de color*/
+  transition: box-shadow 0.5s;
+}
+button:hover {
+  color: #84a98c;
+  box-shadow: 0 0 7px #2f3e46;
+  background-color: #52796f;
 }
 
 input[type=date] {

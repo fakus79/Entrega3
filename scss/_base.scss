@@ -8,7 +8,8 @@
 }
 
 body {
-    background-color: $fondo-light;
+    background-color: $fondo-inicio;
+    background-image: linear-gradient(to bottom, $fondo-inicio, $fondo-fin);
 }
 
 button {
@@ -16,6 +17,14 @@ button {
     padding: 5px;
     border-radius: 12px;
     text-align: center;
+    
+    /*transición y cambio de color*/
+    transition: box-shadow 0.5s;
+    &:hover {
+        color: $verde-cla;
+        box-shadow: 0 0 7px $verde-osc;
+        background-color: $verde-med1;
+        }
 }
 
 input[type="date"] {
