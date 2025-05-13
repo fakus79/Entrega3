@@ -3,6 +3,11 @@
     padding-bottom: $cant; 
 }
 
+@mixin margin-vertical($cant) {
+    margin-top: $cant; 
+    margin-bottom: $cant; 
+}
+
 @mixin flex-centrado {
     justify-content: center;
     display: flex;

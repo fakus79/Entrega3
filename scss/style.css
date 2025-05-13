@@ -107,12 +107,6 @@ input[type=text] {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-
-.filtroBotones__labelFiltro {
-  align-content: center;
-  display: none;
-}
-
 .filtroBotones button {
   color: #52796f;
   margin-left: 10px;
@@ -120,8 +114,9 @@ input[type=text] {
   font-size: small;
 }
 
-.propiedades article {
-  padding-top: 20px;
+.filtroBotones__labelFiltro {
+  align-content: center;
+  display: none;
 }
 
 .tituloProp {
@@ -180,7 +175,7 @@ h1 {
 
 .piePagina {
   margin-top: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   justify-content: right;
   display: flex;
 }
@@ -262,6 +257,7 @@ h1 {
   padding-top: 20px;
 }
 
+/*---------------------------------------------------------------------------------------------------------------*/
 @media (min-width: 600px) {
   /*cambios necesarios para TABLETS Y DESKTOP*/
   .filtroBotones__labelFiltro {

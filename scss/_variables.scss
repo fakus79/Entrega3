@@ -1,9 +1,19 @@
-$fondo-light:#F8F9FA;
+$tema: 'standard';
 
+$fondo-light:#F8F9FA;
 $verde-osc:#2f3e46;
 $verde-med2:#354f52;
 $verde-med1:#52796f;
 $verde-cla:#84a98c;
+
+@if $tema != 'standard' {
+    $fondo-light:#BBBBBB;
+    $verde-osc: #15252d;
+    $verde-med2: #1b282a;
+    $verde-med1:#232a28;
+    $verde-cla:#353735;
+} 
+
   
 $fuente-gral:"Lato", sans-serif;
 
