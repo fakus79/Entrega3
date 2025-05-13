@@ -84,24 +84,21 @@ input[type="text"] {
 
 .filtrosup__otro{
     /*alineación y justificado de pasajeros y botón buscar*/
-    display: flex;
     width: -webkit-fill-available;
     align-items: center;
-    justify-content: center;
+    @include flex-centrado;
 }
 
 .filtrosup__otro-persBusc{
     /*alineación y justificado de pasajeros y botón buscar*/
     flex: 1;
-    justify-content: center;
-    display: flex;
+    @include flex-centrado;
 }
 
 .filtroBotones {
+    @include padding-vertical(20px);
     font-weight: bold;
-    font-size: larger;
-    padding-top: 20px;
-    padding-bottom: 20px;    
+    font-size: larger;   
     color: $verde-med1;
     display: flex; 
     flex-wrap: wrap;
@@ -135,17 +132,6 @@ input[type="text"] {
     color: $verde-med2;
 }
 
-.piePagina{
-    margin-top: 20px;
-    margin-bottom: 30px;
-    a {
-        color: $verde-osc;
-        &:hover {
-           text-decoration: none;
-        }
-    }
-}
-
 .fotoPrincipal {
     color: $verde-med2;   
     padding-bottom: 20px; 
@@ -163,11 +149,9 @@ h1 {
 }
 
 .features {
-    color: $verde-med2;  
-    padding-top: 20px; 
-    padding-bottom: 20px; 
+    @include padding-vertical(20px);
+    color: $verde-med2;      
     list-style-type: none;
-
 }
 
 .contactTexto{
@@ -175,20 +159,18 @@ h1 {
     padding-bottom: 20px; 
 }
 
-
 .msgText{
     resize: none;
 }
 
 .descripcionContacto{
     color: $verde-med2;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    @include padding-vertical(20px);
 }
 
 .pagination-JUS {
     /* oculto la paginación de propiedades para móviles*/
-    display:none;
+    display: none;
 }
 
 .piePagina{
@@ -208,6 +190,7 @@ h1 {
             text-decoration: none;
         }
     }
+    
 }
 
 .card a:link, a:visited {
@@ -267,3 +250,125 @@ h1 {
   
   .bot_send { grid-area: bot_send; padding-top: 20px }
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+@media (min-width: 600px) {
+    /*cambios necesarios para TABLETS Y DESKTOP*/
+
+    .filtroBotones__labelFiltro{
+        /*muestro la label de FILTRO en los botones*/
+        display:block;
+    }
+
+    .pagination-JUS {
+        /*muestro  la paginación de propiedades para móviles*/
+        @include padding-vertical(30px);
+        @include flex-centrado; 
+    }   
+
+
+    /*cambios para la galeria en pantallas más grandes*/    
+    .galeria {
+        display: grid;
+        background-color: white;
+        grid-template-columns: 1fr .5fr .5fr;
+        grid-template-rows:  1fr 1fr; 
+        /*border: solid 1px blue;*/
+    }
+
+    .galeria__ppal {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+    }
+
+    .galeria__item2 {
+        grid-column: 2 / 2; 
+        grid-row: 1 / 1; 
+    }
+
+    .galeria__item3 {
+        grid-column: 3 / 3; 
+        grid-row: 1 / 1; 
+    }
+
+    .galeria__item4 {
+        grid-column: 2 / 2; 
+        grid-row: 2 / 2; 
+    }
+
+    .galeria__item5 {
+        grid-column: 3 / 3;
+        grid-row: 2 / 2;
+    }
+}
+
+
+
+@media (min-width: 990px) {
+    /*cambios necesarios para DESKTOP*/
+
+    .navbar__modif-JUS {
+        justify-content: space-evenly;
+    }
+    
+    .filtroSuperior{
+       flex-wrap: nowrap;
+    
+    }
+    .filtrosup__otro{
+        display: flex;
+        width: auto;
+    }   
+
+    .filtroBotones button {
+        color: $verde-cla;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: medium;
+    }
+
+    
+    .container_contacto {  
+        color: #354f52;  
+        padding: 10px 10px 10px 10px;
+        display: grid;
+        grid-template-columns: 0.5fr 0.5fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+        "txt_label1 inp_name txt_label4"
+        "txt_label2 inp_email area_msg"
+        "txt_label3 imp_tel area_msg"
+        "txt_pol txt_pol bot_send";
+    } 
+
+    .area_msg { 
+        padding-left: 20px
+    }
+
+    .txt_label4 { 
+        padding-left: 20px
+    }
+
+    .bot_send{ 
+        padding-left: 20px
+    }
+
+}
